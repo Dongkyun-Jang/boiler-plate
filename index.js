@@ -1,13 +1,14 @@
 const express = require('express')
 const app = express()
 const port = 5000
+const config = require('./config/key')
 const { User } = require("./models/User")
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false })) //false를 통해 기본으로 내장된 querystring 모듈 사용. true로 하면 따로 설치가 필요한 qs 모듈을 사용하게 된다.
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb+srv://JangDongkyun:ehdrbs135!@cluster0.nxywy.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+mongoose.connect(config.mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
