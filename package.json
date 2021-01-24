@@ -2,9 +2,9 @@
   "name": "boiler-plate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dongkyun",
@@ -14,6 +14,7 @@
     "mongoose": "^5.11.12"
   },
   "devDependencies": {
+    "bcrypt": "^5.0.0",
     "nodemon": "^2.0.7"
   }
 }

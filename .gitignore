@@ -1,2 +1,4 @@
 node_modules
+# 어짜피 npm install하면 자연스럽게 생겨나는 파일이기 떄문에 깃으로 관리할 필요가 없다.
 dev.js  
+#내 개인 key가 있다.
