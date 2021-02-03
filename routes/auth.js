@@ -66,6 +66,7 @@ router.post('/signin', (req, res) => {
                     // unique한 id 값을 사용하여 서로 다른 사용자 두 개의 token 값이 같은 경우를 방지한다
                     const token = jwt.sign({ _id: savedUser._id }, JWT_SECRET)
                     const { _id, name, email } = savedUser
+                    //token은 프론트에서 저장해서 사용할 예정이다
                     res.json({
                         token,
                         user: { _id, name, email }
